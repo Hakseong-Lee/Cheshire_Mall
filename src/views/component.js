@@ -68,7 +68,7 @@ function nav() {
     navbar.insertAdjacentHTML('afterend', `${login} ${register} ${cart}`);
   }
   //카카오 로그아웃
-  Kakao.init('e81149e34fc805f464419e5d213d69ee'); //발급받은 키 중 javascript키를 사용해준다. console.log(Kakao.isInitialized());
+  // Kakao.init('e81149e34fc805f464419e5d213d69ee'); //발급받은 키 중 javascript키를 사용해준다. console.log(Kakao.isInitialized());
   async function kakaoLogout() {
     if (Kakao.Auth.getAccessToken()) {
       Kakao.API.request({
@@ -89,7 +89,7 @@ function nav() {
     if (sessionStorage.getItem('loginTypeCode') == 1) {
       logoutElem.addEventListener('click', () => {
         logoutElem.href = 'javascript:void(0)';
-        kakaoLogout();
+        // kakaoLogout();
         sessionStorage.clear();
         window.location.href = '/';
       });
